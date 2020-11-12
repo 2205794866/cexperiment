@@ -7,8 +7,8 @@ int main()
 {
     int a,b;
     printf("Input two integers a, b:");
-    scanf("%d%d",&a,&b);  //两个%d之间应该有个间隔
-    printf("\nSUM=%d\n the difference between square of a and square of b is:%d",SUM, SUM*DIF);
+    scanf("%d%d",&a,&b);
+    printf("\nSUM=%d\n the difference between square of a and square of b is:%d",SUM, (SUM)*(DIF));  //define是直接交换,这里应该打上括号或者define的时候加上括号
     SWAP(a,b);
     printf("\nNow a=%d,b=%d\n",a,b);
     return 0;

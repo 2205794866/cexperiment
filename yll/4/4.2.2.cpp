@@ -1,6 +1,6 @@
 /*实验4-2程序修改替换题程序*/ 
-#include<stdio.h> 
-int max(int x, int y, int z);
+#include<stdio.h>
+#define max(a,b,c) a>b?(a>c?a:c):(b>c?b:c)  //求三个数的最大值
 float sum(float x, float y);  //函数在使用之前应该先声明
 int main(void)
 {
@@ -13,16 +13,6 @@ int main(void)
 	scanf("%f %f",&d,&e);
 	printf("\nThe sum of them is  %f\n",sum(d,e));
 	return 0;
-}
-
-int max(int x, int y, int z)					
-{
-	int m=z;
-	if (x>y)
-		if(x>z) m=x;
-	else
-    	if(y>z) m=y;
-    return m;
 }
 
 float sum(float x, float y)
