@@ -1,15 +1,15 @@
-/*å®éªŒ1-1ç¨‹åºæ”¹é”™ä¸è·Ÿè¸ªè°ƒè¯•é¢˜æºç¨‹åº*/
+/*ÊµÑé1-1³ÌĞò¸Ä´íÓë¸ú×Ùµ÷ÊÔÌâÔ´³ÌĞò*/
 #include<stdio.h>
-#define PI 3.14159//åŸ:#define PI 3.14159; æœ«å°¾çš„";"ä¹Ÿä¼šå¸¦è¿›å»,è¦æŠŠ";"å»æ‰
+#define PI 3.14159//Ô­:#define PI 3.14159; Ä©Î²µÄ";"Ò²»á´ø½øÈ¥,Òª°Ñ";"È¥µô
 int main()
 {
     int f ;
     short p, k ;
     double c, r, s ;
 
-/* ä»»åŠ¡2 */
+/* ÈÎÎñ2 */
     printf("input the radius r:");
-    scanf("%lf", &r);//åŸ:scanf("%f", &r); ræ˜¯doubleå‹,è¾“å‡ºéƒ½å¯ä»¥ç”¨%f,ä½†æ˜¯è¾“å…¥å¿…é¡»åˆ†å¼€%få’Œ%lf
+    scanf("%lf", &r);//Ô­:scanf("%f", &r); rÊÇdoubleĞÍ,Êä³ö¶¼¿ÉÒÔÓÃ%f,µ«ÊÇÊäÈë±ØĞë·Ö¿ª%fºÍ%lf
     s = PI * r * r;
-    printf("\nThe acreage is %.2f\n\n",s);//åŸ:printf("\nThe acreage is %.2f\n\n",&s); è¾“å‡ºä¸ç”¨"&"
+    printf("\nThe acreage is %.2f\n\n",s);//Ô­:printf("\nThe acreage is %.2f\n\n",&s); Êä³ö²»ÓÃ"&"
 }

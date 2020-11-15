@@ -1,8 +1,8 @@
-/*å®éªŒ4-3è·Ÿè¸ªè°ƒè¯•é¢˜ç¨‹åºåˆ©ç”¨Rè®¡ç®—åœ†çš„é¢ç§¯s*/ 
-#include<stdio.h>  //è¦includeæ ‡å‡†è¾“å…¥è¾“å‡ºåº“
-#include <assert.h>  //è¦includeå¤´æ–‡ä»¶
+/*ÊµÑé4-3¸ú×Ùµ÷ÊÔÌâ³ÌĞòÀûÓÃR¼ÆËãÔ²µÄÃæ»ıs*/ 
+#include<stdio.h>  //Òªinclude±ê×¼ÊäÈëÊä³ö¿â
+#include <assert.h>  //ÒªincludeÍ·ÎÄ¼ş
 #define  R
-int integer_fraction(float x);  //å…ˆå£°æ˜
+int integer_fraction(float x);  //ÏÈÉùÃ÷
 int main(void)
 {
 	float  r, s;
@@ -21,6 +21,6 @@ int main(void)
 
 int integer_fraction(float x)
 {
-  int i=x+0.5;  //iæ˜¯æ•´æ•°éƒ¨åˆ†,ç”¨+0.5çš„æ–¹æ³•å®ç°å››èˆäº”å…¥
+  int i=x+0.5;  //iÊÇÕûÊı²¿·Ö,ÓÃ+0.5µÄ·½·¨ÊµÏÖËÄÉáÎåÈë
   return i;
 }

@@ -11,8 +11,8 @@ int main()
 		int sum = 0, a = 0, i;
 		for(i = 1; i <= n; i++)
 		{
-		    a = temp%10; //最后一位 
-		    temp /= 10;  //去掉后一位 
+		    a = temp%10; //���һλ 
+		    temp /= 10;  //ȥ����һλ 
 		    sum += pow(a,n);
 	    }
 		if(sum == x) 

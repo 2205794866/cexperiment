@@ -1,4 +1,4 @@
-/*瀹為獙5-1绋嬪簭鏀归敊涓庤窡韪皟璇曢绋嬪簭*/
+/*实验5-1程序改错与跟踪调试题程序*/
 #include<stdio.h>
 void strcate(char [],char []);
 void strdelc(char [],char );
