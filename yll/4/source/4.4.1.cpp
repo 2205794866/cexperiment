@@ -8,6 +8,6 @@ int main()
 	scanf("%lf%lf%lf",&a,&b,&c);
 	double s=get_s(a,b,c);
 	double area=get_area(s,a,b,c);
-	printf("%lf %lf",s,area);
+	printf("%lf",area);
 	return 0;
 }
