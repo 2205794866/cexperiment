@@ -1,6 +1,6 @@
-/*ÊµÑé3-1¸Ä´íÌâ³ÌĞò£º¼ÆËãs=1!+2!+3!+¡­+n!*/
+/*å®éªŒ3-1æ”¹é”™é¢˜ç¨‹åºï¼šè®¡ç®—s=1!+2!+3!+â€¦+n!*/
 #include <stdio.h>
-long long sum_fac(int n); //ÏÈÉùÃ÷
+long long sum_fac(int n); //å…ˆå£°æ˜
 int main()
 {
     int k;
@@ -8,15 +8,15 @@ int main()
          printf("k=%d\tthe sum is %lld\n",k,sum_fac(k));
     return 0;
 }
-long long sum_fac(int n) //longÌ«Ğ¡ÁË×°²»ÏÂ
+long long sum_fac(int n) //longå¤ªå°äº†è£…ä¸ä¸‹
 {
     long long s=0;
     long long i,fac;
-    fac = 1;  //facÏÈ³õÊ¼»¯
+    fac = 1;  //facå…ˆåˆå§‹åŒ–
     for(i=1;i<=n;i++)
 	{
 		fac*=i;
-		s+=fac;  //sµÄ+Òª·ÅÔÚÑ­»·ÀïÃæ
+		s+=fac;  //sçš„+è¦æ”¾åœ¨å¾ªç¯é‡Œé¢
     }
     return s;
 }

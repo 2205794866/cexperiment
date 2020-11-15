@@ -1,14 +1,14 @@
-/*ÊµÑé4-1¸Ä´íÓë¸ú×Ùµ÷ÊÔÌâ³ÌĞò£º¼ÆËãÆ½·½²î¡¢½»»»Á½Êı*/ 
+/*å®éªŒ4-1æ”¹é”™ä¸è·Ÿè¸ªè°ƒè¯•é¢˜ç¨‹åºï¼šè®¡ç®—å¹³æ–¹å·®ã€äº¤æ¢ä¸¤æ•°*/ 
 #include<stdio.h>
 #define SUM a+b
 #define DIF a-b
-#define SWAP(a,b)  a=a^b,b=a^b,a=a^b  //²»ÄÜÖ±½Ó½»»»,ĞèÒªµÚÈı¸ö±äÁ¿»òÕßÓÃÒì»ò(¶ÔÍ¬Ò»¸öÊı×ÖÒì»òÁ½´ÎÏàµ±ÓÚÃ»ÓĞÒì»ò)
+#define SWAP(a,b)  a=a^b,b=a^b,a=a^b  //ä¸èƒ½ç›´æ¥äº¤æ¢,éœ€è¦ç¬¬ä¸‰ä¸ªå˜é‡æˆ–è€…ç”¨å¼‚æˆ–(å¯¹åŒä¸€ä¸ªæ•°å­—å¼‚æˆ–ä¸¤æ¬¡ç›¸å½“äºæ²¡æœ‰å¼‚æˆ–)
 int main() 
 {
     int a,b;
     printf("Input two integers a, b:");
     scanf("%d%d",&a,&b);
-    printf("\nSUM=%d\n the difference between square of a and square of b is:%d",SUM, (SUM)*(DIF));  //defineÊÇÖ±½Ó½»»»,ÕâÀïÓ¦¸Ã´òÉÏÀ¨ºÅ»òÕßdefineµÄÊ±ºò¼ÓÉÏÀ¨ºÅ
+    printf("\nSUM=%d\n the difference between square of a and square of b is:%d",SUM, (SUM)*(DIF));  //defineæ˜¯ç›´æ¥äº¤æ¢,è¿™é‡Œåº”è¯¥æ‰“ä¸Šæ‹¬å·æˆ–è€…defineçš„æ—¶å€™åŠ ä¸Šæ‹¬å·
     SWAP(a,b);
     printf("\nNow a=%d,b=%d\n",a,b);
     return 0;

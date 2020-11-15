@@ -1,11 +1,11 @@
-/* ÊµÑé2-1¸Ä´íÌâ³ÌÐò£ººÏÊýÅÐ¶ÏÆ÷*/
+/* å®žéªŒ2-1æ”¹é”™é¢˜ç¨‹åºï¼šåˆæ•°åˆ¤æ–­å™¨*/
 #include <stdio.h>
 #include<iostream>
 using namespace std;
 int main( )
 { 
 int i, x, k, flag = 0;
-printf("±¾³ÌÐòÅÐ¶ÏºÏÊý£¬ÇëÊäÈë´óÓÚ1µÄÕûÊý£¬ÒÔCtrl+Z½áÊø\n");
+printf("æœ¬ç¨‹åºåˆ¤æ–­åˆæ•°ï¼Œè¯·è¾“å…¥å¤§äºŽ1çš„æ•´æ•°ï¼Œä»¥Ctrl+Zç»“æŸ\n");
 while (scanf("%d", &x) !=EOF) 
 {
     i=2,k=x>>1;
@@ -20,11 +20,11 @@ while (scanf("%d", &x) !=EOF)
 	}while(i<=k&&flag==0);
 	if(flag==1)
     {
-    	printf("%dÊÇºÏÊý", x);
+    	printf("%dæ˜¯åˆæ•°", x);
     }
     else
     {
-	printf("%d²»ÊÇºÏÊý", x);
+	printf("%dä¸æ˜¯åˆæ•°", x);
     }
 	flag = 0;
 }

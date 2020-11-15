@@ -1,4 +1,4 @@
-/*ÊµÑé3-2³ÌĞòĞŞ¸ÄÌæ»»µÚ(2)Ìâ³ÌĞò£º¸ù¾İ¹«Ê½¼ÆËã s*/
+/*å®éªŒ3-2ç¨‹åºä¿®æ”¹æ›¿æ¢ç¬¬(2)é¢˜ç¨‹åºï¼šæ ¹æ®å…¬å¼è®¡ç®— s*/
 #include<stdio.h>
 double sum(double x,int n)
 {
@@ -10,7 +10,7 @@ double sum(double x,int n)
 	{
 		z=z+(last_mulx*x)/(last_fac*i);
 		last_mulx*=x;
-		last_fac*=i; //ÀûÓÃÉÏ´ÎµÄÖµ
+		last_fac*=i; //åˆ©ç”¨ä¸Šæ¬¡çš„å€¼
 	}
     return z;
 } 

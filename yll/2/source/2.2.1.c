@@ -1,18 +1,18 @@
-/* ÊµÑé2-1¸Ä´íÌâ³ÌÐò£ººÏÊýÅÐ¶ÏÆ÷*/
+/* å®žéªŒ2-1æ”¹é”™é¢˜ç¨‹åºï¼šåˆæ•°åˆ¤æ–­å™¨*/
 #include <stdio.h>
 int main( )
 { 
 int i, x, k, flag = 0;
-printf("±¾³ÌÐòÅÐ¶ÏºÏÊý£¬ÇëÊäÈë´óÓÚ1µÄÕûÊý£¬ÒÔCtrl+Z½áÊø\n");
+printf("æœ¬ç¨‹åºåˆ¤æ–­åˆæ•°ï¼Œè¯·è¾“å…¥å¤§äºŽ1çš„æ•´æ•°ï¼Œä»¥Ctrl+Zç»“æŸ\n");
 while (scanf("%d", &x) !=EOF) {
 for(i=2,k=x>>1;i<=k;i++)
-		if (!(x%i)) { //´òÀ¨ºÅ(ÓÅÏÈ¼¶
+		if (!(x%i)) { //æ‰“æ‹¬å·(ä¼˜å…ˆçº§
 			flag = 1;
 			break;
 	}
-if(flag==1) printf("%dÊÇºÏÊý", x);// if(flag==1)²»ÊÇ = 
-else printf("%d²»ÊÇºÏÊý", x);
-flag = 0; //flagÒª¸´Î»
+if(flag==1) printf("%dæ˜¯åˆæ•°", x);// if(flag==1)ä¸æ˜¯ = 
+else printf("%dä¸æ˜¯åˆæ•°", x);
+flag = 0; //flagè¦å¤ä½
 }
 return 0;
 }
