@@ -1,4 +1,4 @@
-/*实验3-3跟踪调试题程序：计算fabonacci数列前n项和*/
+/*瀹為獙3-3璺熻釜璋冭瘯棰樼▼搴忥細璁＄畻fabonacci鏁板垪鍓峮椤瑰拰*/
 #include<stdio.h> 
 int main(void)
 {

@@ -5,7 +5,7 @@ int main(void)
 {
     int num, i = 2;
     scanf("%d", &num);
-    while(!(is_veg(i) && is_veg(num-i)))  //Á½¸ö¶¼ÒªÊÇÖÊÊı,·ñÔòÏÂÒ»¸ö
+    while(!(is_veg(i) && is_veg(num-i)))  //ä¸¤ä¸ªéƒ½è¦æ˜¯è´¨æ•°,å¦åˆ™ä¸‹ä¸€ä¸ª
         i++;
     printf("%d = %d + %d", num, i, num - i);
     return 0;
@@ -14,7 +14,7 @@ int is_veg(int n)
 {
     int i, j;
     for (i = 2, j = (int)sqrt(n); i <= j; i++)
-        if (n % i) //²»ÄÜÕû³ı¾Í¼ÌĞø
+        if (n % i) //ä¸èƒ½æ•´é™¤å°±ç»§ç»­
             continue;
         else
             return 0;

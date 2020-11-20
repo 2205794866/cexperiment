@@ -1,10 +1,10 @@
-/*ÊµÑé5-1³ÌĞò¸Ä´íÓë¸ú×Ùµ÷ÊÔÌâ³ÌĞò*/
+/*å®éªŒ5-1ç¨‹åºæ”¹é”™ä¸è·Ÿè¸ªè°ƒè¯•é¢˜ç¨‹åº*/
 #include<stdio.h>
 void strcate(char [],char []);
 void strdelc(char [],char );
 int main(void)
 {
-	char a[]="Language", b[]="Programming";
+	char a[]="Language", b[20]="Programming";
 	printf("%s %s\n", b,a);
 	strcate(b,a);
 	printf("%s %s\n",b,a);
@@ -14,18 +14,19 @@ int main(void)
 }
 void strcate(char t[],char s[])
 {
-	int i = 0, j = 0;
-	while(t[i])i++;
-	printf("\n\n%s %s\n\n",t,s);
-	while((t[i] = s[j]))
-	{
-		i++;j++;
-	}
-	printf("\n\n%s %s\n\n",t,s);
+	int i = 0,  j = 0;
+	while(t[i]) i++;  //ç»Ÿè®¡tçš„é•¿åº¦
+	while((t[i++]=s[j++])!= '\0') ;
 }
 void strdelc(char s[], char c)
 {
 	int j,k;
-	for(j=k=0; s[j] != '\0'; j++)
-	if(s[j] != c)	s[k++] = s[j];
+	for(j=0,k=0; s[k] != '\0'; j++)  //åˆ¤æ–­s[k]æ˜¯ä¸æ˜¯\0
+	{
+		if(s[j] != c)
+		{
+			s[k++] = s[j];
+		}
+	}
+	//s[k]='\0';
 }

@@ -1,6 +1,6 @@
 #include "file.h"
 int x,y;
-char ch;  //°Ñ¹²ÏíµÄ±äÁ¿ÉùÃ÷Ò»±é
+char ch;  //æŠŠå…±äº«çš„å˜é‡å£°æ˜ä¸€é
 int main(void)
 {
         x=10;

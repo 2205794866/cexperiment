@@ -33,7 +33,7 @@ def cpp2c():
     input("按任意键继续...")
     os.system('cls')
 
-def convert(filename,out_enc="UTF-8"):
+def convert1(filename,out_enc="gbk"):
   try:
     content=codecs.open(filename,'rb').read()
     source_encoding=chardet.detect(content)['encoding']
@@ -47,25 +47,56 @@ def convert(filename,out_enc="UTF-8"):
   except IOError as err:
     print("I/O error:{0}".format(err))
 
-def explore(dir):
+def convert2(filename,out_enc="utf-8"):
+  try:
+    content=codecs.open(filename,'rb').read()
+    source_encoding=chardet.detect(content)['encoding']
+    print ("fileencoding:%s" % source_encoding)
+
+    if source_encoding != None :
+      content=content.decode(source_encoding).encode(out_enc)
+      codecs.open(filename,'wb').write(content)
+    else :
+      print("can not recgonize file encoding %s" % filename)
+  except IOError as err:
+    print("I/O error:{0}".format(err))
+
+def explore1(dir):
   for root,dirs,files in os.walk(dir):
     for file in files:
       if os.path.splitext(file)[1]=='.c' or os.path.splitext(file)[1]=='.py':
         print ("fileName:%s" % file)
         path=os.path.join(root,file)
-        convert(path)
+        convert1(path)
 
-def change_encode():
-  input("将要把所有.c文件编码转为UTF-8,按任意键继续...")
-  explore(os.getcwd())
+def explore2(dir):
+  for root,dirs,files in os.walk(dir):
+    for file in files:
+      if os.path.splitext(file)[1]=='.c' or os.path.splitext(file)[1]=='.py':
+        print ("fileName:%s" % file)
+        path=os.path.join(root,file)
+        convert2(path)
+
+def change_encode1():
+  input("将要把所有.c文件编码转为gbk,按任意键继续...")
+  explore1(os.getcwd())
   print("操作完毕...")
   input("按任意键继续...")
   os.system('cls')
+
+def change_encode2():
+  input("将要把所有.c文件编码转为UTF-8,按任意键继续...")
+  explore2(os.getcwd())
+  print("操作完毕...")
+  input("按任意键继续...")
+  os.system('cls')
+  
 while(1):
     print("--------------------")
     print("1.递归删除.exe")
     print("2.递归改名.cpp->.c")
-    print("3.递归修改.c,.py文件编码为UTF-8")
+    print("3.递归修改.c,.py文件编码为gbk")
+    print("4.递归修改.c,.py文件编码为utf-8")
     print("exit.退出")
     print("--------------------")
     temp = input("输入操作:")
@@ -74,7 +105,9 @@ while(1):
     elif temp=='2':
         cpp2c()
     elif temp=='3':
-        change_encode()
+        change_encode1()
+    elif temp=='4':
+        change_encode2()
     elif temp=='exit':
         quit()
     else:
