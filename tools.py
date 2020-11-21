@@ -4,7 +4,7 @@ import sys
 import codecs
 import chardet
 def delfile():
-    input("å°†è¦åˆ é™¤æ‰€æœ‰å­æ–‡ä»¶å¤¹ä¸­çš„exeæ–‡ä»¶,æŒ‰ä»»æ„é”®ç»§ç»­...")
+    input("½«ÒªÉ¾³ıËùÓĞ×ÓÎÄ¼ş¼ĞÖĞµÄexeÎÄ¼ş,°´ÈÎÒâ¼ü¼ÌĞø...")
     rootdir = os.getcwd()
     fileSubfix =[]
     fileSubfix.append("exe")
@@ -12,13 +12,13 @@ def delfile():
         for filename in filenames:
             delfile = os.path.join(parent,filename)
             if os.path.splitext(filename)[1][1:] in fileSubfix:
-                    print('åˆ é™¤:'+delfile)
+                    print('É¾³ı:'+delfile)
                     os.remove(delfile)
-    print("æ“ä½œå®Œæ¯•...")
-    input("æŒ‰ä»»æ„é”®ç»§ç»­...")
+    print("²Ù×÷Íê±Ï...")
+    input("°´ÈÎÒâ¼ü¼ÌĞø...")
     os.system('cls')
 def cpp2c():
-    input("å°†è¦æŠŠæ‰€æœ‰cppæ–‡ä»¶è½¬ä¸ºcæ–‡ä»¶,æŒ‰ä»»æ„é”®ç»§ç»­...")
+    input("½«Òª°ÑËùÓĞcppÎÄ¼ş×ªÎªcÎÄ¼ş,°´ÈÎÒâ¼ü¼ÌĞø...")
     rootdir = os.getcwd()
     fileSubfix =[]
     fileSubfix.append("cpp")
@@ -27,10 +27,10 @@ def cpp2c():
             changefile = os.path.join(parent,filename)
             if os.path.splitext(filename)[1][1:] in fileSubfix:
                 newname = os.path.splitext(changefile)[0]+".c"
-                print('æ”¹å:'+changefile+' ---> '+newname)
+                print('¸ÄÃû:'+changefile+' ---> '+newname)
                 os.rename(changefile,newname)
-    print("æ“ä½œå®Œæ¯•...")
-    input("æŒ‰ä»»æ„é”®ç»§ç»­...")
+    print("²Ù×÷Íê±Ï...")
+    input("°´ÈÎÒâ¼ü¼ÌĞø...")
     os.system('cls')
 
 def convert1(filename,out_enc="gbk"):
@@ -78,28 +78,28 @@ def explore2(dir):
         convert2(path)
 
 def change_encode1():
-  input("å°†è¦æŠŠæ‰€æœ‰.cæ–‡ä»¶ç¼–ç è½¬ä¸ºgbk,æŒ‰ä»»æ„é”®ç»§ç»­...")
+  input("½«Òª°ÑËùÓĞ.cÎÄ¼ş±àÂë×ªÎªgbk,°´ÈÎÒâ¼ü¼ÌĞø...")
   explore1(os.getcwd())
-  print("æ“ä½œå®Œæ¯•...")
-  input("æŒ‰ä»»æ„é”®ç»§ç»­...")
+  print("²Ù×÷Íê±Ï...")
+  input("°´ÈÎÒâ¼ü¼ÌĞø...")
   os.system('cls')
 
 def change_encode2():
-  input("å°†è¦æŠŠæ‰€æœ‰.cæ–‡ä»¶ç¼–ç è½¬ä¸ºUTF-8,æŒ‰ä»»æ„é”®ç»§ç»­...")
+  input("½«Òª°ÑËùÓĞ.cÎÄ¼ş±àÂë×ªÎªUTF-8,°´ÈÎÒâ¼ü¼ÌĞø...")
   explore2(os.getcwd())
-  print("æ“ä½œå®Œæ¯•...")
-  input("æŒ‰ä»»æ„é”®ç»§ç»­...")
+  print("²Ù×÷Íê±Ï...")
+  input("°´ÈÎÒâ¼ü¼ÌĞø...")
   os.system('cls')
   
 while(1):
     print("--------------------")
-    print("1.é€’å½’åˆ é™¤.exe")
-    print("2.é€’å½’æ”¹å.cpp->.c")
-    print("3.é€’å½’ä¿®æ”¹.c,.pyæ–‡ä»¶ç¼–ç ä¸ºgbk")
-    print("4.é€’å½’ä¿®æ”¹.c,.pyæ–‡ä»¶ç¼–ç ä¸ºutf-8")
-    print("exit.é€€å‡º")
+    print("1.µİ¹éÉ¾³ı.exe")
+    print("2.µİ¹é¸ÄÃû.cpp->.c")
+    print("3.µİ¹éĞŞ¸Ä.c,.pyÎÄ¼ş±àÂëÎªgbk")
+    print("4.µİ¹éĞŞ¸Ä.c,.pyÎÄ¼ş±àÂëÎªutf-8")
+    print("exit.ÍË³ö")
     print("--------------------")
-    temp = input("è¾“å…¥æ“ä½œ:")
+    temp = input("ÊäÈë²Ù×÷:")
     if temp=='1':
         delfile()
     elif temp=='2':

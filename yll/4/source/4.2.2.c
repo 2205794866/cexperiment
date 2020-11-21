@@ -1,7 +1,7 @@
-/*å®éªŒ4-2ç¨‹åºä¿®æ”¹æ›¿æ¢é¢˜ç¨‹åº*/ 
+/*ÊµÑé4-2³ÌĞòĞŞ¸ÄÌæ»»Ìâ³ÌĞò*/ 
 #include<stdio.h>
-#define max(a,b,c) a>b?(a>c?a:c):(b>c?b:c)  //æ±‚ä¸‰ä¸ªæ•°çš„æœ€å¤§å€¼
-float sum(float x, float y);  //å‡½æ•°åœ¨ä½¿ç”¨ä¹‹å‰åº”è¯¥å…ˆå£°æ˜
+#define max(a,b,c) a>b?(a>c?a:c):(b>c?b:c)  //ÇóÈı¸öÊıµÄ×î´óÖµ
+float sum(float x, float y);  //º¯ÊıÔÚÊ¹ÓÃÖ®Ç°Ó¦¸ÃÏÈÉùÃ÷
 int main(void)
 {
 	int a, b, c;

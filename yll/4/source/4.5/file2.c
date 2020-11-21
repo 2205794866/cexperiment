@@ -1,6 +1,6 @@
 #include "file.h"
 int x,y;
-char ch;  //æŠŠå…±äº«çš„å˜é‡å£°æ˜ä¸€é
+char ch;  //°Ñ¹²ÏíµÄ±äÁ¿ÉùÃ÷Ò»±é
 void func1(void)
 {
         x++;

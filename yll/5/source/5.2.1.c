@@ -1,4 +1,4 @@
-/*å®éªŒ5-1ç¨‹åºæ”¹é”™ä¸è·Ÿè¸ªè°ƒè¯•é¢˜ç¨‹åº*/
+/*ÊµÑé5-1³ÌĞò¸Ä´íÓë¸ú×Ùµ÷ÊÔÌâ³ÌĞò*/
 #include<stdio.h>
 void strcate(char [],char []);
 void strdelc(char [],char );
@@ -15,13 +15,13 @@ int main(void)
 void strcate(char t[],char s[])
 {
 	int i = 0,  j = 0;
-	while(t[i]) i++;  //ç»Ÿè®¡tçš„é•¿åº¦
+	while(t[i]) i++;  //Í³¼ÆtµÄ³¤¶È
 	while((t[i++]=s[j++])!= '\0') ;
 }
 void strdelc(char s[], char c)
 {
 	int j,k;
-	for(j=0,k=0; s[k] != '\0'; j++)  //åˆ¤æ–­s[k]æ˜¯ä¸æ˜¯\0
+	for(j=0,k=0; s[k] != '\0'; j++)  //ÅĞ¶Ïs[k]ÊÇ²»ÊÇ\0
 	{
 		if(s[j] != c)
 		{
