@@ -1,6 +1,6 @@
 #include "file.h"
-int x,y;
-char ch;  //把共享的变量声明一遍
+extern int x,y;
+extern char ch;
 void func1(void)
 {
         x++;
