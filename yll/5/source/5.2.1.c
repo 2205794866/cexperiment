@@ -28,5 +28,5 @@ void strdelc(char s[], char c)
 			s[k++] = s[j];
 		}
 	}
-	//s[k]='\0';
+	s[k]='\0';
 }
