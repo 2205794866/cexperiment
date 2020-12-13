@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {
-	int num=199;
+	int num=0;
+	scanf("%d",&num);
 	char *p=&num;
-	for(int i=0;i<4;i++)
+	for(int i=3;i>=0;i--)
 	{
-		printf("%d:high:%x low:%x\n",i,(*(p+i)>>4)&0x000F,(*(p+i))&0x000F);
+		printf("%d:high:%x low:%x\n",4-i,(*(p+i)>>4)&0x000F,(*(p+i))&0x000F);
 	}
 	return 0;
 }

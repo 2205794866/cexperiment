@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>  //mallocÔÚstdlibÀïÃæ
 #include<string.h>
-#define N 4
+#define N 3
 char *delete_bank(char *s)
 {
 	while(*s==' '||*s=='\t')
