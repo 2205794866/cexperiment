@@ -1,6 +1,7 @@
 # 华中科技大学2020级c语言实验课程代码和实验报告
 **存档到github仅作为学习交流使用!**
 
+yll's experiment 
 |  文件   | 描述  |
 |  :----:  | :----: |
 | [实验一](https://github.com/yllhwa/cexperiment/tree/master/yll/1)  | 第一次实验 |
@@ -9,6 +10,16 @@
 | [实验四](https://github.com/yllhwa/cexperiment/tree/master/yll/4)  | 第四次实验 |
 | [实验五](https://github.com/yllhwa/cexperiment/tree/master/yll/5)  | 第五次实验 |
 | [实验六](https://github.com/yllhwa/cexperiment/tree/master/yll/6)  | 第六次实验 |
+
+fqh's experiment
+|  文件   | 描述  |
+|  :----:  | :----: |
+| [实验一](https://github.com/2205794866/cexperiment/tree/master/fqh/1)  | 第一次实验 |
+| [实验二](https://github.com/2205794866/cexperiment/tree/master/fqh/2)  | 第二次实验 |
+| [实验三](https://github.com/2205794866/cexperiment/tree/master/fqh/3)  | 第三次实验 |
+| [实验四](https://github.com/2205794866/cexperiment/tree/master/fqh/4)  | 第四次实验 |
+| [实验五](https://github.com/2205794866/cexperiment/tree/master/fqh/5)  | 第五次实验 |
+| [实验六](https://github.com/2205794866/cexperiment/tree/master/fqh/6)  | 第六次实验 |
 
 # LICENSE
 
