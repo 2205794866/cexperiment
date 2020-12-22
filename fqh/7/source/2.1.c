@@ -10,7 +10,7 @@ int main()
         char c;
         char *t;
     }a[] = {{11, 'A', u}, { 100, 'B', v}}, *p = a;
-    //printf("%d", (++p)->x);
+    // printf("%d", (++p)->x);
     // p++;
     // printf("%c", p->c);
     // printf("%c", *(p++->t));
