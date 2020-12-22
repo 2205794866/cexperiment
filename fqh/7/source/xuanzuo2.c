@@ -201,14 +201,15 @@ void output_more(List *list)
 
 void sort(List *list)
 {
-    Node *p, *temp,*prior,*after;
-    temp = (Node *)malloc(sizeof(Node));
+    average(list);
+    Node *p,*prior,*after,*q;
     int len, i,j,k;
     //统计学生
     for(p = list->head,len = 0; p ; p = p->next,len++);
     //冒泡排序
-    for(i = 0, p = list->head; i<len-1; i++, p = p->next)
+    for(i = 0; i<len-1; i++)
     {
+        p = list->head;
         if(p->average > p->next->average)
         {
             after = p->next->next;
@@ -216,7 +217,24 @@ void sort(List *list)
             list->head->next = p;
             p->next = after;
         }
-        for(i = 1;p=list->head->next)
+        for(j = 1,prior = list->head, p = prior ->next; j<len-i-1;j++)
+        {
+            if(p->average > p->next->average)
+            {
+                q = p->next;
+                after = q->next;
+                prior->next = q;
+                q->next = p;
+                p->next = after;
+                prior = prior->next;
+            }
+            else
+            {
+                p = p->next;
+                prior = prior->next;
+            }
+            
+        }
     }
 
 }
