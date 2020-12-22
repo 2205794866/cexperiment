@@ -10,6 +10,7 @@ typedef struct _Node
     int Score[4];
     int total;
     double average;
+    struct _Node* prior;
     struct _Node* next;
 } Node;
 
@@ -99,10 +100,12 @@ void input_info(List *list)
         {
             list->head = p;
             list->tail = p;
+            p ->prior = list->tail;
         }
         else
         {
             list->tail->next = p;
+            p->prior = list->tail;
             list->tail = p;
         }
     }
