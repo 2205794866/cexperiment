@@ -13,6 +13,7 @@ int main()
     //printf("%c", (p++, p->c)); //B
     //printf("%c", (*p++->t, *p->t)); //x
     //printf("%c", *(++p)->t); //x
-    printf("");
+    //printf("%c", *++p->t); //V
+    //printf("%c", ++*p->t); //V
     return 0;
 }
