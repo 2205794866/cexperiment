@@ -1,0 +1,7 @@
+*.exe
+# Office 缓存文件
+~$*.doc
+~$*.docx
+~$*.ppt
+~$*.pptx 
+~$*.xls
