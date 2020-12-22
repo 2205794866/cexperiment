@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <windows.h>
+// struct构建
 typedef struct _Node
 {
     char ID[30];
@@ -17,18 +18,18 @@ typedef struct _List
     Node *head;
     Node *tail;
 } List;
-
+//函数声明
 void input_info(List *list);
 void output_info(List *list);
 void change(List *list);
-// void average(List *list);
-// void output_more(List *list);
+void average(List *list);
+void output_more(List *list);
 
 int main()
 {
 
-    int  n;
-    int flag = 1;
+    int  n, flag = 1;
+    void (*p)(List *);
     List list;
     list.head = NULL;
     list.tail = NULL;
@@ -47,16 +48,17 @@ int main()
         scanf("%d", &n);
         switch (n)
         {
-            case 1 :input_info(&list);break;
-            case 2 :output_info(&list); break;
-            // case '3' :change(&list); break;
-            // case '4' :average(&list); break;
-            // case '5' :output_more(&list); break;
-            default : flag = 0;
+            case 1 :p =input_info;break;
+            case 2 :p =output_info; break;
+            case 3 :p = change; break;
+            case 4 :p = average; break;
+            case 5 :p = output_more; break;
+            default :printf("正常退出\n"); flag = 0;
             break;           
         }
         if(!flag)
         break;
+        p(&list);
     }
     return 0;
 }
@@ -117,21 +119,79 @@ void output_info(List *list)
 }
 void change(List *list)
 {   
-    char s[30]
+    char s[30], t[30];
+    int n,temp, flag;
     printf("请输入要修改的学生的学号\n");
     scanf("%s", s);
     Node *p = list->head;
-    while(!strcmp(s,p->ID) || !p)
+    while(p && strcmp(s,p->ID))
     p = p->next;
-    if(!p)
+    if(p)
     {
-        
+        while(1)
+        {
+            printf("请输入要修改的项目:\n");
+            printf("1:学号\n");
+            printf("2:姓名\n");
+            printf("3:英语成绩\n");
+            printf("4:高等数学成绩\n");
+            printf("5:普通物理成绩\n");
+            printf("6:C语言程序设计成绩\n");
+            printf("输入其他字符退出\n");
+            scanf("%d", &n);
+            printf("请输入要修改的内容:\n");
+            switch (n)
+            {
+            case 1: scanf("%s", t);
+                    strcpy(p->ID, t);break;
+            case 2: scanf("%s", t);
+                    strcpy(p->name, t);break;
+            case 3: scanf("%d", &temp);
+                    p->Score[0] = temp;break;
+            case 4: scanf("%d", &temp);
+                    p->Score[1] = temp;break;
+            case 5: scanf("%d", &temp);
+                    p->Score[2] = temp; break;
+            case 6: scanf("%d", &temp);
+                    p->Score[3] = temp;break;
+            default: flag = 0;
+                    break;
+            }
+            if(!flag)
+                break;
+        }
+    }
+    else printf("输入错误，无此学生\n");
+}
+
+void average(List *list)
+{
+    Node *p;
+    int i,n;
+    for(p = list->head; p; p = p->next)
+    {
+        p->total = 0;
+        for(i = 0; i<4; i++)
+        p->total += p->Score[i];
+        p->average = p->total/4.0;
     }
 
-
-
-
-
 }
-// void average(List *list);
-// void output_more(List *list);
+
+void output_more(List *list)
+{
+    average(list);
+    int i;
+    Node *p;
+    for(p = list->head, i = 1; p; p = p->next,i++)
+    {
+        printf("第%d个学生学号:%s\n", i,p->ID);
+        printf("姓名:%s\n", p->name);
+        printf("英语成绩:         %d\n", p->Score[0]);
+        printf("高等数学成绩:     %d\n", p->Score[1]);
+        printf("普通物理成绩:     %d\n", p->Score[2]);
+        printf("C语言程序设计成绩:%d\n", p->Score[3]);
+        printf("总成绩为:         %d\n", p->total);
+        printf("平均成绩为:       %.2f\n", p->average);
+    }
+}
