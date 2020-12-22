@@ -20,6 +20,7 @@ fqh's experiment
 | [实验四](https://github.com/2205794866/cexperiment/tree/master/fqh/4)  | 第四次实验 |
 | [实验五](https://github.com/2205794866/cexperiment/tree/master/fqh/5)  | 第五次实验 |
 | [实验六](https://github.com/2205794866/cexperiment/tree/master/fqh/6)  | 第六次实验 |
+| [实验七](https://github.com/2205794866/cexperiment/tree/master/fqh/7)  | 第七次实验 |
 
 # LICENSE
 
