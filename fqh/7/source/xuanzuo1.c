@@ -12,7 +12,7 @@ typedef struct _Node
     double average;
     struct _Node* next;
 } Node;
-
+//构建链表
 typedef struct _List
 {
     Node *head;

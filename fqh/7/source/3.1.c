@@ -35,7 +35,40 @@ int main()
     p_fun[6] = f6;
     p_fun[7] = f7;
     struct bits b;
-    
+    unsigned int n;
+    scanf("%u", &n);
+    b.bit0 = n &0x1;
+    n >>= 1;
+    b.bit1 = n&0x1;
+    n >>= 1;
+    b.bit2 = n&0x1;
+    n >>= 1;
+    b.bit3 = n&0x1;
+    n >>= 1;
+    b.bit4 = n&0x1;
+    n >>= 1;
+    b.bit5 = n&0x1;
+    n >>= 1;
+    b.bit6 = n&0x1;
+    n >>=1;
+    b.bit7 = n&0x1;
+    if(b.bit0)
+    p_fun[0](0);
+    if(b.bit1)
+    p_fun[1](1);
+    if(b.bit2)
+    p_fun[2](2);
+    if(b.bit3)
+    p_fun[3](3);
+    if(b.bit4)
+    p_fun[4](4);
+    if(b.bit5)
+    p_fun[5](5);
+    if(b.bit6)
+    p_fun[6](6);
+    if(b.bit7)
+    p_fun[7](7);
+    return 0;
 
 
 

@@ -237,7 +237,6 @@ void sort(List *list)
                 p = p->next;
                 prior = prior->next;
             }
-            
         }
     }
 
