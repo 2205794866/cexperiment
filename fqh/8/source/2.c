@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int main(int argc, char* argv[])
 {
-	char ch;
+	int ch;								//?fgetc()的返回值是int ,应将ch定义为int类型
 	FILE *fp;
 	if(argc!=2){
 		printf("Arguments error!\n");
