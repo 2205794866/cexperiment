@@ -21,16 +21,13 @@ void main(void)
 void create_list(struct s_list **headp,int *p)//?更改函数原型，接收head的地址
 {
     int i = 0;
-    struct s_list *loc_head, *tail = NULL;
-    while(*p++)
-    i++;
-    p = p-2;
-    for(;i>0;i--)
+    struct s_list *loc_head, *after = NULL;
+    while(*p != 0)
     {
         loc_head = (struct s_list*)malloc(sizeof(struct s_list));
-        loc_head->data = *p--;
-        loc_head->next = tail;
-        tail = loc_head;
+        loc_head->data = *p++;
+        loc_head->next = after;
+        after = loc_head;
     }
     *headp = loc_head;
 }
