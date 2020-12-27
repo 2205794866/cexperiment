@@ -5,7 +5,7 @@ struct s_list
     int data;            /* 数据域 */
     struct s_list *next; /* 指针域 */
 };
-void create_list(struct s_list **headp, int *p);
+void create_list(struct s_list **headp, int *p); //传入二级指针
 void main(void)
 {
     struct s_list *head = NULL, *p;
@@ -20,7 +20,7 @@ void main(void)
     }
     printf("\n");
 }
-void create_list(struct s_list **headp, int *p)
+void create_list(struct s_list **headp, int *p) //传入二级指针
 {
     struct s_list *loc_head = NULL, *tail;
     if (p[0] == 0) /* 相当于*p==0 */
@@ -38,5 +38,5 @@ void create_list(struct s_list **headp, int *p)
         }
         tail->next = NULL; /* 对指针域赋NULL值 */
     }
-    *headp = loc_head; /* 使头指针headp指向新创建的链表 */
+    *headp = loc_head; // /* 使头指针headp指向新创建的链表 */
 }

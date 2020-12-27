@@ -46,7 +46,7 @@ void f7(int tmp)
 int main()
 {
     void (*p[8])(int) = {f0, f1, f2, f3, f4, f5, f6, f7};
-    unsigned short int n = 3;
+    unsigned short int n = 15;
     a.bit0 = n & 0x1;
     n >>= 1;
     a.bit1 = n & 0x1;

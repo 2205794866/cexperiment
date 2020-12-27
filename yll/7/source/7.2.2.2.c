@@ -24,6 +24,7 @@ void create_list(struct s_list **headp, int *p)
 {
     struct s_list *loc_head = NULL, *tail = NULL;
     int len = 0;
+    int *tmp = p;
     while (*p++)
     {
         len++;
@@ -33,7 +34,7 @@ void create_list(struct s_list **headp, int *p)
     for (; len > 0; len--)
     {
         loc_head = (struct s_list *)malloc(sizeof(struct s_list));
-        loc_head->data = *p--; /* 对数据域赋值 */
+        loc_head->data = *tmp++; /* 对数据域赋值 */
         loc_head->next = tail;
         tail = loc_head;
     }
