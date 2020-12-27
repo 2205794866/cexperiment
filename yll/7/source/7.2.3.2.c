@@ -55,28 +55,28 @@ void edit(data *head_p)
             if (cmd == 1)
             {
                 printf("input the new name:");
-                scanf("%s", p->name);
+                scanf("%s", &p->name);
                 break;
             }
             if (cmd == 2)
             {
                 printf("input the new eng:");
-                scanf("%s", p->eng);
+                scanf("%s", &p->eng);
             }
             if (cmd == 3)
             {
                 printf("input the new math:");
-                scanf("%s", p->math);
+                scanf("%s", &p->math);
             }
             if (cmd == 4)
             {
                 printf("input the new phy:");
-                scanf("%s", p->phy);
+                scanf("%s", &p->phy);
             }
             if (cmd == 5)
             {
                 printf("input the new c_lang:");
-                scanf("%s", p->c_lang);
+                scanf("%s", &p->c_lang);
             }
             p->all = p->c_lang + p->eng + p->math + p->phy;
             p->aver = ((double)p->all) / 4.0;
@@ -149,6 +149,5 @@ int main()
         4.output everyone's average\n\
         ");
     }
-
     return 0;
 }
