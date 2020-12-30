@@ -1,13 +1,11 @@
 # include<stdio.h>
 # include<string.h>
-char *mystrcpy (char *, char*);
-char *mystrcat (char *, char*);
-char *mystrtok (char *, char*);
+
 int main (void)
 {
-    char *(*p)(char *, char*);
-    char *(*s[3])(char *, char *);
-    s[0] = mystrcpy,s[1] = mystrcat,s[2] = mystrtok;
+    char *(*p)(char *, const char*);
+    char *(*s[3])(char *, const char *);
+    s[0] = strcpy,s[1] = strcat,s[2] = strtok;
     char a[80], b[80], *result;
     int choice;
     while(1)
@@ -37,40 +35,4 @@ int main (void)
 	return 0;
 }
 
-char *mystrcpy (char *s, char*t)
-{
-    char *s0;
-    s0 = s;
-    while(*t != '\0')
-    *s++ = *t++;
-    *s='\0';
-    return s0;
-}
-
-char *mystrcat(char *s, char*t)
-{
-    char *s0 = s;
-    while (*s != '\0')
-    s++;
-    while(*t != '\0')
-    *s++ = *t++;
-    *s = '\0';
-    return s0;
-}
-
-char *mystrtok(char *s, char *t)
-{
-    char *ps = s, *pt, *pc;
-    while(*ps != '\0')
-    {
-        for(pt = t, pc = ps; *pt != '\0'&& *pt== *pc; pt++, pc++);
-        if(*pt == '\0')
-        {
-            *ps = '\0';
-            break;
-        }
-        ps++;
-    }
-    return s;
-}
 
