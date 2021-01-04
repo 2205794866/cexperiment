@@ -42,7 +42,6 @@ int main()
         printf("第4个字节:\n");
         printf("源文件中:%x\t", *p++ & 0xff);
         printf("二进制文件中:%x\n", c[t++] &0xff);
-
     }
     fclose(fp);
     return 0;
