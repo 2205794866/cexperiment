@@ -2,9 +2,7 @@
 
 int main()
 {
-    char s[100] = "hello";
-    char t[100];
-    char *p = s, *p1 = t;
-    while(*p1++ = *p++);
+    char c = 0xf;
+    printf("%2x", c);
     return 0;
 }
